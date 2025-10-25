@@ -59,7 +59,7 @@ def generate_ics_content(plan_text:str, start_date: datetime = None) -> bytes:
 
 
 # Set up the Streamlit app
-st.title("AI Travel Planner using Llama-3.2 ")
+st.title("AI Travel Planner using Llama-3 ")
 st.caption("Plan your next adventure with AI Travel Planner by researching and planning a personalized itinerary on autopilot using local Llama-3")
 
 # Initialize session state to store the generated itinerary
@@ -73,7 +73,7 @@ if serp_api_key:
     researcher = Agent(
         name="Researcher",
         role="Searches for travel destinations, activities, and accommodations based on user preferences",
-        model=Ollama(id="llama3.2"),
+        model=Ollama(id="llama3"),
         description=dedent(
             """\
         You are a world-class travel researcher. Given a travel destination and the number of days the user wants to travel for,
@@ -93,7 +93,7 @@ if serp_api_key:
     planner = Agent(
         name="Planner",
         role="Generates a draft itinerary based on user preferences and research results",
-        model=Ollama(id="llama3.2"),
+        model=Ollama(id="llama3"),
         description=dedent(
             """\
         You are a senior travel planner. Given a travel destination, the number of days the user wants to travel for, and a list of research results,

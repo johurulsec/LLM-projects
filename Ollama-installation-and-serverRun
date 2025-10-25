@@ -1,0 +1,13 @@
+1. Install the Ollama runtime
+https://ollama.com/download
+
+# After installation, you should be able to run the command below in your terminal (not Python)
+> ollama run llama3
+
+2. Keep the Ollama server running
+Once it’s installed, you can run it manually:
+> ollama serve
+
+# (Optional) Check if Ollama is already running
+To confirm on Windows:
+> netstat -ano | findstr 11434
